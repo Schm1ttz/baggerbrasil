@@ -13,6 +13,7 @@
             --light-green: #4caf50;
             --accent-gold: #ffb300;
             --dark-gold: #ff8f00;
+            --whatsapp-green: #25d366;
             --earth-brown: #5d4037;
             --light-brown: #8d6e63;
             --white: #ffffff;
@@ -140,6 +141,28 @@
             color: var(--accent-gold);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(255, 179, 0, 0.2);
+        }
+
+        .whatsapp-button {
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: 2px solid var(--whatsapp-green);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-button:hover {
+            background-color: transparent;
+            color: var(--whatsapp-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
         }
 
         /* Hero Section */
@@ -607,6 +630,31 @@
             font-size: 1.1rem;
         }
 
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
         /* Footer */
         footer {
             background-color: var(--black);
@@ -760,10 +808,16 @@
                 display: inline-block;
                 margin-top: 20px;
             }
+            
+            .header-cta {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-end;
+            }
         }
 
         @media (max-width: 768px) {
-            .header-cta {
+            .header-cta .phone-number {
                 display: none;
             }
             
@@ -805,6 +859,14 @@
             .section-title h2 {
                 font-size: 1.8rem;
             }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.7rem;
+            }
         }
     </style>
 </head>
@@ -820,10 +882,10 @@
             <div class="header-cta">
                 <div class="phone-number">
                     <i class="fas fa-phone"></i>
-                    (11) 3456-7890
+                    (48) 999685733
                 </div>
-                <a href="#contact" class="cta-button">
-                    <i class="fas fa-envelope"></i> Solicitar Orçamento
+                <a href="https://wa.me/5548999685733?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20Escavadeira%20Elétrica%20ME30D%20da%20Bagger%20Brasil." target="_blank" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
         </div>
@@ -838,7 +900,7 @@
                 <h1>ESCAVADEIRA <span class="hero-highlight">ELÉTRICA</span> DO BRASIL</h1>
                 <p class="hero-subtitle">Revolucionária mini escavadeira 100% elétrica com baterias de LÍTIO BYD. Poder de força semelhante a uma escavadeira a combustão de 3.8 toneladas.</p>
                 
-                <div class="spec-highlights">
+                <div class="spec-highlights" style="margin-bottom: 30px;">
                     <div class="spec-highlight">
                         <i class="fas fa-battery-full" style="color: #4CAF50; margin-right: 8px;"></i>
                         <strong>Bateria:</strong> 72V 540Ah Lítio (BYD)
@@ -852,6 +914,10 @@
                         <strong>Peso:</strong> 2.950 kg
                     </div>
                 </div>
+                
+                <a href="https://wa.me/5548999685733?text=Olá!%20Estou%20interessado%20na%20Escavadeira%20Elétrica%20ME30D.%20Pode%20me%20enviar%20mais%20informações%20e%20condições%20de%20pagamento?" target="_blank" class="whatsapp-button" style="font-size: 1.2rem; padding: 15px 35px;">
+                    <i class="fab fa-whatsapp"></i> Falar com Vendedor
+                </a>
             </div>
             
             <div class="hero-image">
@@ -1027,7 +1093,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>(11) 3456-7890</span>
+                            <span>(48) 999685733</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -1039,11 +1105,11 @@
                         </div>
                     </div>
                     
-                    <a href="tel:+551134567890" class="cta-button" style="width: 100%; justify-content: center; margin-bottom: 15px;">
-                        <i class="fas fa-phone"></i> Ligar Agora
+                    <a href="https://wa.me/5548999685733?text=Olá!%20Estou%20interessado%20na%20Escavadeira%20Elétrica%20ME30D%20da%20Bagger%20Brasil.%20Gostaria%20de%3A%0A%0A1.%20Mais%20informações%20técnicas%0A2.%20Condições%20de%20pagamento%0A3.%20Agendar%20uma%20demonstração%0A%0AAguardo%20seu%20contato!" target="_blank" class="whatsapp-button" style="width: 100%; justify-content: center; margin-bottom: 15px;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="mailto:vendas@baggerbrasil.com.br" class="cta-button" style="width: 100%; justify-content: center; background-color: transparent; border-color: white;">
-                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    <a href="tel:+5548999685733" class="cta-button" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-phone"></i> Ligar Agora
                     </a>
                 </div>
                 
@@ -1061,10 +1127,19 @@
                         <li><i class="fas fa-check-circle"></i> Giro lateral do braço</li>
                         <li><i class="fas fa-check-circle"></i> <strong>Garantia de 3 anos</strong></li>
                     </ul>
+                    
+                    <a href="https://wa.me/5548999685733?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20as%20características%20da%20Escavadeira%20Elétrica%20ME30D%3A%0A%0A1.%20Sobre%20a%20garantia%20de%203%20anos%0A2.%20Funcionamento%20do%20ar%20condicionado%0A3.%20Detalhes%20do%20kit%20multimídia%0A4.%20Opções%20de%20esteiras%20(de%20borracha)%0A%0APode%20me%20ajudar?" target="_blank" class="whatsapp-button" style="width: 100%; justify-content: center; margin-top: 20px; font-size: 0.9rem; padding: 10px 20px;">
+                        <i class="fab fa-whatsapp"></i> Tirar Dúvidas Técnicas
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5548999685733?text=Olá!%20Vi%20o%20site%20da%20Escavadeira%20Elétrica%20ME30D%20e%20gostaria%20de%20mais%20informações." target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer>
@@ -1098,7 +1173,7 @@
                 <div class="footer-contact">
                     <h4>Contato</h4>
                     <p><i class="fas fa-map-marker-alt"></i> Av. das Máquinas, 1500 - Zona Rural, São Paulo, SP</p>
-                    <p><i class="fas fa-phone"></i> (11) 3456-7890</p>
+                    <p><i class="fas fa-phone"></i> (48) 999685733</p>
                     <p><i class="fas fa-envelope"></i> vendas@baggerbrasil.com.br</p>
                     <p><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h</p>
                 </div>
@@ -1162,6 +1237,42 @@
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(el);
+        });
+        
+        // WhatsApp message customization
+        function sendWhatsApp(messageType) {
+            let phone = "5548999685733"; // Substitua pelo seu número
+            let message = "Vi a escavedeira pelo site que gostaria de saber mais!";
+            
+            switch(messageType) {
+                case 'info':
+                    message = "Olá! Estou interessado na Escavadeira Elétrica ME30D. Pode me enviar mais informações e condições de pagamento?";
+                    break;
+                case 'demo':
+                    message = "Olá! Gostaria de agendar uma demonstração da Escavadeira Elétrica ME30D. Quais dias e horários estão disponíveis?";
+                    break;
+                case 'technical':
+                    message = "Olá! Tenho dúvidas técnicas sobre a Escavadeira Elétrica ME30D, principalmente sobre a bateria e sistema elétrico. Pode me ajudar?";
+                    break;
+                case 'price':
+                    message = "Olá! Gostaria de saber sobre condições de pagamento e possíveis descontos para a Escavadeira Elétrica ME30D.";
+                    break;
+                default:
+                    message = "Olá! Gostaria de mais informações sobre a Escavadeira Elétrica ME30D da Bagger Brasil.";
+            }
+            
+            let encodedMessage = encodeURIComponent(message);
+            let whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+        
+        // Add event listeners to WhatsApp buttons
+        document.querySelectorAll('.whatsapp-button').forEach(button => {
+            // Remove any existing click events
+            button.addEventListener('click', function(e) {
+                // Allow default behavior (href) to work
+                // The href already contains the WhatsApp URL
+            });
         });
     </script>
 </body>
